@@ -1,0 +1,45 @@
+import React from 'react';
+import Background from '../assets/background2.svg';
+import { motion } from 'framer-motion';
+
+const Hero = () => {
+  return (
+    <section
+      id='hero'
+      className="relative w-full min-h-screen flex items-center justify-center text-center bg-cover bg-center"
+      style={{ backgroundImage: `url(${Background})` }}
+    >
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="relative z-10 text-white flex flex-col justify-center items-center">
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Business Development & Consultancy
+        </motion.h1>
+
+        <motion.p
+          className="mt-4 max-w-2xl text-lg md:text-xl opacity-90"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          We transform your capital into a working business.
+        </motion.p>
+
+        <motion.button
+          className="mt-8 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-xl shadow-md hover:scale-105 transition"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          Get Started
+        </motion.button>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
