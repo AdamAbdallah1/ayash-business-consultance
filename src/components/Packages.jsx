@@ -11,7 +11,6 @@ export default function Packages() {
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-        {/* Monthly */}
         <div className="bg-[#1a1a1a] p-8 rounded-2xl shadow-lg border border-gray-800 hover:scale-105 hover:shadow-2xl hover:-rotate-1 transition-transform duration-300 flex flex-col">
           <h3 className="text-2xl font-bold mb-2">Monthly Package</h3>
           <p className="text-yellow-400 font-semibold text-xl mb-4">QAR 6,000 / month</p>
@@ -34,7 +33,6 @@ export default function Packages() {
           </button>
         </div>
 
-        {/* 3-Month */}
         <div className="relative bg-[#1a1a1a] p-8 rounded-2xl shadow-lg border border-yellow-500 hover:scale-105 hover:shadow-2xl transition-transform duration-300 flex flex-col">
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full text-sm">
             Most Popular
@@ -57,7 +55,6 @@ export default function Packages() {
           </button>
         </div>
 
-        {/* 6-Month */}
         <div className="bg-[#1a1a1a] p-8 rounded-2xl shadow-lg border border-gray-800 hover:scale-105 hover:shadow-2xl hover:-rotate-2 transition-transform duration-300 flex flex-col">
           <h3 className="text-2xl font-bold mb-2">6-Month Package</h3>
           <p className="text-yellow-400 font-semibold text-xl">QAR 28,500 total</p>

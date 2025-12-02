@@ -11,10 +11,8 @@ export default function Contact() {
         Reach out to us — we’ll guide you from idea to execution.
       </p>
 
-      {/* Info Cards */}
       <div className="mt-10 grid md:grid-cols-2 gap-6">
         
-        {/* Contact Info */}
         <div className="bg-white/50 backdrop-blur-md shadow-lg rounded-xl p-6 text-left hover:scale-105 transition-transform duration-300">
           <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
           <p className="flex items-center gap-3 text-gray-700">
@@ -36,7 +34,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Business Hours */}
         <div className="bg-white/50 backdrop-blur-md shadow-lg rounded-xl p-6 text-left hover:scale-105 transition-transform duration-300">
           <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
           <p className="text-gray-700">Monday – Friday</p>
@@ -47,7 +44,6 @@ export default function Contact() {
 
       </div>
 
-      {/* Buttons */}
       <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
         <a
           href="https://wa.me/96181090757"

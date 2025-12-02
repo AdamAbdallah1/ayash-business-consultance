@@ -14,7 +14,7 @@ function App() {
   }, []);
 
   return (
-    <div className="font-sans bg-white text-gray-900 pb-4">
+    <div className="font-sans bg-white text-gray-900">
       <Navbar />
       <Hero />
       <About />

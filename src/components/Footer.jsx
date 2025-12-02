@@ -19,7 +19,6 @@ export default function Footer() {
           <a href="#contact" className="hover:text-yellow-400">Contact</a>
         </div>
 
-        {/* Social Media */}
         <div className="flex space-x-4">
           <a href="#" className="hover:text-yellow-400"><FaFacebookF /></a>
           <a href="#" className="hover:text-yellow-400"><FaInstagram /></a>
