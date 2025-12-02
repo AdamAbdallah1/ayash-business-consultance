@@ -28,12 +28,6 @@ function About() {
         </p>
         
       </div>
-      <a
-        href="#contact"
-        className="mt-8 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-xl shadow-md hover:scale-105 transition"
-      >
-        Get in Touch
-      </a>
     </section>
   );
 }
