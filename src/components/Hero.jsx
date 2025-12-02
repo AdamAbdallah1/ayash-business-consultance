@@ -34,6 +34,9 @@ const Hero = () => {
           </p>
 
           <motion.button
+            onClick={() => {
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  }}
             className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-xl shadow-md hover:scale-105 transition"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
