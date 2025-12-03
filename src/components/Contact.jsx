@@ -14,7 +14,7 @@ export default function Contact() {
       </p>
 
       <div className="grid md:grid-cols-2 mt-14 gap-8 w-full max-w-6xl">
-        <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-2xl p-8 text-left border border-white/30 hover:scale-[1.02] transition">
+        <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-2xl p-8 text-left border border-white/30 hover:scale-[1.02] transition justify-center">
           <h3 className="text-xl font-semibold mb-4 text-[#B52E33]">Contact Information</h3>
           <p className="flex items-center gap-3 text-white/90">
             <FaWhatsapp className="text-green-500" size={22} /> +961 81 090 757
