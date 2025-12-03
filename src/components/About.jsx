@@ -1,30 +1,25 @@
 import React from 'react';
-import { FcAbout } from "react-icons/fc";
 
 function About() {
   return (
     <section
-      id="about" data-aos="fade-up"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gray-50 py-20 px-6"
+      id="about"
+      className="w-full py-24 px-6 bg-[#1a0d3c] flex justify-center"
     >
-      <div className="bg-white/70 backdrop-blur-lg shadow-xl rounded-2xl p-10 max-w-3xl text-center border border-white/40">
-        
-        <h2 className="text-4xl font-extrabold text-gray-800">
-          About Our Company
-        </h2>
+      <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-3xl p-10 md:p-14 max-w-3xl border border-yellow-400/30 text-center">
 
-        <div className="w-24 h-1 bg-yellow-400 mx-auto my-4 rounded-full"></div>
+        <h2 className="text-4xl font-extrabold text-white">About Our Company</h2>
+        <div className="w-24 h-1 bg-[#B82E33] mx-auto my-4 rounded-full"></div>
 
-        <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-          At Ayash Business Consultancy, we help individuals turn their available capital into a
-          fully functioning business. From branding and strategy to launching your
-          online presence, our team builds modern, profitable business systems
-          tailored to your goals and budget.
+        <p className="mt-4 text-gray-200 text-lg leading-relaxed">
+          At Ayash Business Consultancy, we help individuals turn their available capital
+          into a fully functioning business. From branding and strategy to launching your
+          online presence, our team delivers profitable business systems tailored to your goals.
         </p>
 
-        <p className="mt-4 text-gray-700 leading-relaxed">
-          Whether you're starting a new project or expanding your digital services,
-          we guide you step-by-step and deliver premium, practical solutions.
+        <p className="mt-4 text-gray-200 leading-relaxed">
+          Whether you're starting a new project or expanding your digital services, we guide you
+          step-by-step and provide premium, practical solutions built for real growth.
         </p>
         
       </div>
