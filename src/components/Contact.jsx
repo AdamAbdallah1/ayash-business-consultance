@@ -1,5 +1,5 @@
 import React from "react";
-import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import { HiMail, HiLocationMarker } from "react-icons/hi";
 import { FaWhatsapp, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Contact() {
@@ -8,13 +8,13 @@ export default function Contact() {
       id="contact"
       className="w-full py-24 px-6 flex flex-col items-center text-white justify-center"
     >
-      <h2 className="text-4xl font-bold text-center">Contact Us</h2>
+      <h2 className="text-4xl font-bold text-center mb-6">Contact Us</h2>
       <p className="mt-4 text-white/80 max-w-2xl mx-auto text-lg text-center">
         Have capital and want to turn it into a real working business? Reach out — we’ll guide you from idea to execution.
       </p>
 
-      <div className="grid md:grid-cols-2 mt-14 gap-8 w-full max-w-6xl">
-        <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-2xl p-8 text-left border border-white/30 hover:scale-[1.02] transition justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-14 gap-8 w-full max-w-6xl justify-items-center">
+        <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-2xl p-6 sm:p-8 text-left border border-white/30 w-full max-w-md hover:scale-[1.02] transition flex flex-col justify-center items-center">
           <h3 className="text-xl font-semibold mb-4 text-[#B52E33]">Contact Information</h3>
           <p className="flex items-center gap-3 text-white/90">
             <FaWhatsapp className="text-green-500" size={22} /> +961 81 090 757
@@ -31,7 +31,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-2xl p-8 text-left border border-white/30 hover:scale-[1.02] transition">
+        <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-2xl p-6 sm:p-8 text-left border border-white/30 w-full max-w-md hover:scale-[1.02] transition flex flex-col justify-center items-center">
           <h3 className="text-xl font-semibold mb-4 text-[#B52E33]">Business Hours</h3>
           <p className="text-white/80">Monday – Friday</p>
           <p className="font-semibold text-white">10:00 AM – 6:00 PM</p>
