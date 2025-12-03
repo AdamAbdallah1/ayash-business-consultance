@@ -5,7 +5,7 @@ export default function Packages() {
   };
 
   const cardBase =
-    "bg-[#2b1a4d] p-6 sm:p-8 rounded-2xl shadow-xl border flex flex-col hover:scale-[1.03] hover:shadow-2xl transition-all min-w-[200px] sm:min-w-[220px] flex-shrink-0";
+    "bg-black/30 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col hover:scale-[1.03] hover:shadow-2xl transition-all min-w-[180px] flex-shrink-0";
 
   const packages = [
     {
@@ -62,42 +62,42 @@ export default function Packages() {
   ];
 
   return (
-    <section id="packages" data-aos="fade-up" className="w-full px-6 py-20 bg-[#1a0d3c] text-white">
+    <section id="packages" data-aos="fade-up" className="w-full px-6 py-20 text-white">
       <h2 className="text-4xl font-bold text-center mb-14">Our Packages</h2>
 
-      {/* Horizontal scroll for small screens, 2-per-row for medium/large */}
-      <div className="flex flex-row md:flex-wrap gap-6 justify-center md:justify-between overflow-x-auto md:overflow-visible snap-x snap-mandatory max-w-6xl mx-auto py-4">
-        {packages.map((pkg) => (
-          <div
-            key={pkg.title}
-            className={`${cardBase} snap-center border-gray-700 md:w-[45%] lg:w-[45%] relative`}
-          >
-            {pkg.badge && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#B82E33] text-black font-bold px-3 py-1 rounded-full text-sm z-10">
-                {pkg.badge}
-              </div>
-            )}
+      <div className="flex flex-row gap-6 justify-center overflow-x-auto snap-x snap-mandatory max-w-7xl mx-auto py-4">
+  {packages.map((pkg) => (
+    <div
+      key={pkg.title}
+      className={`${cardBase} snap-center w-[300px] relative`}
+    >
+      {pkg.badge && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#B82E33] text-black font-bold px-3 py-1 rounded-full text-sm z-10">
+          {pkg.badge}
+        </div>
+      )}
 
-            <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-            <p className="text-[#B82E33] font-semibold text-xl mb-2">{pkg.price}</p>
-            <p className="text-gray-300 mb-4 text-sm">{pkg.desc}</p>
+      <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
+      <p className="text-[#B82E33] font-semibold text-xl mb-2">{pkg.price}</p>
+      <p className="text-gray-300 mb-4 text-sm">{pkg.desc}</p>
 
-            <ul className="text-gray-300 space-y-2 mb-6 text-sm">
-              {pkg.features.map((feat) => (
-                <li key={feat}>• {feat}</li>
-              ))}
-            </ul>
-
-            <button
-              onClick={() => handlePackageClick(pkg.title)}
-              className="w-full py-3 mt-auto text-black rounded-xl font-semibold shadow-md transition hover:bg-[#f5787d]"
-              style={{ backgroundColor: pkg.btnColor }}
-            >
-              Choose Package
-            </button>
-          </div>
+      <ul className="text-gray-300 space-y-2 mb-6 text-sm">
+        {pkg.features.map((feat) => (
+          <li key={feat}>• {feat}</li>
         ))}
-      </div>
+      </ul>
+
+      <button
+        onClick={() => handlePackageClick(pkg.title)}
+        className="w-full py-3 mt-auto text-white rounded-xl font-semibold shadow-md transition hover:bg-[#f5787d]"
+        style={{ backgroundColor: pkg.btnColor }}
+      >
+        Choose Package
+      </button>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 }

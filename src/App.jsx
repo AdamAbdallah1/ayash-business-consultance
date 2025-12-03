@@ -14,7 +14,12 @@ function App() {
   }, []);
 
   return (
-    <div className="font-sans bg-white text-gray-900">
+    <div className="font-sans bg-white text-gray-900"
+    style={{
+        background: "linear-gradient(135deg, #6b08d2, #945a62, #7c3c64)",
+        backgroundAttachment: "fixed", // optional for nice effect
+      }}>
+        
       <Navbar />
       <Hero />
       <About />

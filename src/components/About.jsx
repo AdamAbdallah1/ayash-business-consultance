@@ -1,12 +1,18 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
 
 function About() {
   return (
-    <section
+    <motion.section
+    initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
       id="about"
-      className="w-full py-24 px-6 bg-[#1a0d3c] flex justify-center"
+      className="w-full py-24 px-6 flex justify-center"
     >
-      <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-3xl p-10 md:p-14 max-w-3xl border border-yellow-400/30 text-center">
+      <div className="bg-white/10 backdrop-blur-xl shadow-xl rounded-3xl p-10 md:p-14 max-w-3xl border border-white/30 text-center">
 
         <h2 className="text-4xl font-extrabold text-white">About Our Company</h2>
         <div className="w-24 h-1 bg-[#B82E33] mx-auto my-4 rounded-full"></div>
@@ -23,7 +29,7 @@ function About() {
         </p>
         
       </div>
-    </section>
+    </motion.section>
   );
 }
 
