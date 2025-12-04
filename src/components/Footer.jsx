@@ -13,15 +13,39 @@ export default function Footer() {
         </div>
 
         <div className="flex space-x-8 text-sm font-medium">
-          <a href="#hero" className="hover:text-yellow-400 transition">Home</a>
-          <a href="#about" className="hover:text-yellow-400 transition">About</a>
-          <a href="#packages" className="hover:text-yellow-400 transition">Packages</a>
-          <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
+          <a
+            href="#hero"
+            className="hover:text-yellow-400 transition transform hover:-translate-y-[2px]"
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className="hover:text-yellow-400 transition transform hover:-translate-y-[2px]"
+          >
+            About
+          </a>
+          <a
+            href="#packages"
+            className="hover:text-yellow-400 transition transform hover:-translate-y-[2px]"
+          >
+            Packages
+          </a>
+          <a
+            href="#contact"
+            className="hover:text-yellow-400 transition transform hover:-translate-y-[2px]"
+          >
+            Contact
+          </a>
         </div>
 
         <div className="flex space-x-4 text-lg">
           {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
-            <a key={idx} href="#" className="hover:text-yellow-400 transition">
+            <a
+              key={idx}
+              href="#"
+              className="hover:text-yellow-400 transition transform hover:-translate-y-[2px]"
+            >
               <Icon />
             </a>
           ))}

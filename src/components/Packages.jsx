@@ -4,9 +4,6 @@ export default function Packages() {
     window.open(`https://wa.me/96181090757?text=${encodeURIComponent(text)}`, "_blank");
   };
 
-  const cardBase =
-    "bg-black/30 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col hover:scale-[1.03] hover:shadow-2xl transition-all min-w-[180px] flex-shrink-0";
-
   const packages = [
     {
       title: "Diagnostic & Action Plan",
@@ -25,7 +22,7 @@ export default function Packages() {
       desc: "Continuous strategy and execution support.",
       features: [
         "Weekly strategy sessions (4/month)",
-        "Documented sales & marketing plans (updated quarterly/monthly)",
+        "Documented sales & marketing plans",
         "Lead generation & conversion planning",
         "Monthly team training workshop",
         "Live KPI dashboard",
@@ -62,42 +59,63 @@ export default function Packages() {
   ];
 
   return (
-    <section id="packages" data-aos="fade-up" className="w-full px-6 py-20 text-white">
-      <h2 className="text-4xl font-bold text-center mb-14">Our Packages</h2>
+    <section id="packages" data-aos="fade-up" className="w-full px-6 py-24 text-black">
+      
+      <h2 className="text-4xl font-bold text-center mb-3">Our Packages</h2>
+      <p className="text-center text-gray-600 mb-10 max-w-xl mx-auto text-sm">
+        Choose the package that fits your business growth stage.
+      </p>
 
-      <div className="flex flex-row gap-6 justify-center overflow-x-auto snap-x snap-mandatory max-w-7xl mx-auto py-4">
-  {packages.map((pkg) => (
-    <div
-      key={pkg.title}
-      className={`${cardBase} snap-center w-[300px] relative`}
-    >
-      {pkg.badge && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#B82E33] text-black font-bold px-3 py-1 rounded-full text-sm z-10">
-          {pkg.badge}
-        </div>
-      )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        {packages.map((pkg) => (
+          <div
+            key={pkg.title}
+            className="
+              bg-black/10 
+              backdrop-blur-xl 
+              rounded-2xl 
+              shadow-lg 
+              hover:shadow-2xl
+              hover:shadow-[#B82E33]/30
+              p-5
+              flex 
+              flex-col 
+              relative 
+              transition-all 
+              duration-300
+              hover:-translate-y-2
+              min-h-[320px]
+            "
+          >
+            {pkg.badge && (
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#B82E33] text-white font-semibold px-3 py-1 rounded-full text-sm">
+                {pkg.badge}
+              </div>
+            )}
 
-      <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-      <p className="text-[#B82E33] font-semibold text-xl mb-2">{pkg.price}</p>
-      <p className="text-gray-300 mb-4 text-sm">{pkg.desc}</p>
+            <h3 className="text-xl font-bold mb-1">{pkg.title}</h3>
+            <p className="text-[#B82E33] font-semibold text-[16px] mb-2">{pkg.price}</p>
+            <p className="text-gray-700 mb-4 text-sm">{pkg.desc}</p>
 
-      <ul className="text-gray-300 space-y-2 mb-6 text-sm">
-        {pkg.features.map((feat) => (
-          <li key={feat}>• {feat}</li>
+            <ul className="text-gray-700 space-y-1 mb-6 text-sm">
+              {pkg.features.map((feat) => (
+                <li key={feat} className="flex items-start">
+                  <span className="text-[#B82E33] font-bold mr-2">•</span>
+                  {feat}
+                </li>
+              ))}
+            </ul>
+
+            <button
+              onClick={() => handlePackageClick(pkg.title)}
+              className="w-full py-2.5 mt-auto text-white rounded-xl font-semibold shadow-md transition hover:bg-[#f5787d]"
+              style={{ backgroundColor: pkg.btnColor }}
+            >
+              Choose Package
+            </button>
+          </div>
         ))}
-      </ul>
-
-      <button
-        onClick={() => handlePackageClick(pkg.title)}
-        className="w-full py-3 mt-auto text-white rounded-xl font-semibold shadow-md transition hover:bg-[#f5787d]"
-        style={{ backgroundColor: pkg.btnColor }}
-      >
-        Choose Package
-      </button>
-    </div>
-  ))}
-</div>
-
+      </div>
     </section>
   );
 }

@@ -1,20 +1,26 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Background from '../assets/background.svg';
+import React from "react";
+import { motion } from "framer-motion";
+import HeroBg from "../assets/HeroBg.jpg";
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col lg:flex-row-reverse items-center justify-center px-6 md:px-20 text-white gap-10 lg:gap-20"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-20 text-white overflow-hidden mt-10"
     >
-      <div className="w-full lg:w-1/2 flex justify-center">
-        <img src={Background} alt="Hero Background" className="max-w-full h-auto" />
-      </div>
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${HeroBg})` }}
+      ></div>
 
-      <div className="relative z-10 w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+      {/* Content */}
+      <div className="relative z-10 w-full max-w-3xl flex flex-col items-center text-center px-4">
         <motion.h1
-          className="text-4xl md:text-6xl font-extrabold leading-tight mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-snug sm:leading-tight mb-4 sm:mb-6"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -23,7 +29,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-2xl text-gray-200 max-w-2xl mb-10"
+          className="text-base sm:text-lg md:text-2xl max-w-xl sm:max-w-2xl mb-6 sm:mb-10 text-white/90"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -33,9 +39,9 @@ const Hero = () => {
 
         <motion.button
           onClick={() =>
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" })
           }
-          className="px-10 py-4 bg-[#B82E33] text-black font-bold rounded-xl shadow-lg hover:bg-yellow-500 hover:scale-105 transition-all"
+          className="px-6 sm:px-10 py-3 sm:py-4 bg-[#B82E33] text-white font-bold rounded-xl shadow-lg hover:bg-[#8f1519] hover:scale-105 transition-all"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
