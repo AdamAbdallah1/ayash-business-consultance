@@ -9,16 +9,13 @@ const Hero = () => {
       className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-20 overflow-hidden mt-10
                  bg-white md:bg-transparent"
     >
-      {/* Background Image only on md and up */}
       <div
         className="absolute inset-0 hidden md:block bg-cover bg-center"
         style={{ backgroundImage: `url(${HeroBg})` }}
       ></div>
 
-      {/* Dark Overlay only on md and up */}
       <div className="absolute inset-0 hidden md:block bg-black/50 backdrop-blur-sm"></div>
 
-      {/* Content */}
       <div className="relative z-10 w-full max-w-3xl flex flex-col items-center text-center px-4">
         <motion.h1
           className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-snug sm:leading-tight mb-4 sm:mb-6
