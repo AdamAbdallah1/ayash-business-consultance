@@ -29,7 +29,7 @@ export default function Navbar() {
     <img
       src={Logo}
       alt="Company Logo"
-      className="h-16 object-contain scale-65"
+      className="h-16 object-contain scale-50"
     />
   </div>
 
@@ -39,13 +39,12 @@ export default function Navbar() {
           <a
             key={item}
             href={`#${item.toLowerCase()}`}
-            className="relative font-semibold tracking-wide text-gray-900 hover:text-yellow-500 transition group"
+            className="relative font-semibold tracking-wide text-gray-900 hover:text-[#B82E33] transition group"
           >
             {item}
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#B82E33] transition-all duration-300 group-hover:w-full"></span>
           </a>
         ))}
-        {/* GET STARTED BUTTON */}
         <a
           href="#contact"
           className="ml-4 px-6 py-2 bg-[#b6595c] hover:bg-[#8f1519] text-white font-semibold rounded-xl shadow-lg transition-all duration-300 ease-out"
@@ -69,7 +68,7 @@ export default function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-white text-3xl font-semibold hover:text-yellow-400 transition"
+              className="text-white text-3xl font-semibold hover:text-[#B82E33] transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item}
