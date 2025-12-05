@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full py-60 px-4 flex flex-col items-center text-black justify-center"
+      className="w-full py-40 md:py-60 px-4 flex flex-col items-center text-black justify-center"
     >
       <h2 className="text-3xl font-bold text-center mb-3">Contact Us</h2>
 
@@ -47,20 +47,21 @@ export default function Contact() {
       </div>
 
       <div className="mt-8 flex flex-col md:flex-row items-center gap-3 justify-center w-full max-w-3xl">
-        <a
-          href="https://wa.me/96181090757"
-          className="px-8 py-3 bg-[#25D366] text-black font-semibold rounded-xl shadow-lg hover:opacity-90 hover:scale-105 transition flex items-center gap-2 justify-center"
-        >
-          <FaWhatsapp color="white" size={18} /> <span className="text-white text-sm sm:text-base">WhatsApp Us</span>
-        </a>
+  <a
+    href="https://wa.me/96181090757"
+    className="px-6 py-2 bg-[#25D366] text-black font-semibold rounded-xl shadow-lg hover:opacity-90 hover:scale-105 transition flex items-center gap-2 justify-center min-w-[180px]"
+  >
+    <FaWhatsapp color="white" size={18} /> 
+    <span className="text-white text-sm sm:text-base">WhatsApp Us</span>
+  </a>
 
-        <a
-          href="mailto:cedars.tech.consulting@gmail.com"
-          className="px-8 py-3 bg-[#3A5487] text-white font-semibold rounded-xl shadow-lg hover:opacity-90 hover:scale-105 transition flex items-center gap-2 justify-center"
-        >
-          <span className="text-sm sm:text-base">Send Email</span>
-        </a>
-      </div>
+  <a
+    href="mailto:cedars.tech.consulting@gmail.com"
+    className="px-6 py-2 bg-[#3A5487] text-white font-semibold rounded-xl shadow-lg hover:opacity-90 hover:scale-105 transition flex items-center gap-2 justify-center min-w-[180px]"
+  >
+    <span className="text-sm sm:text-base">Send Email</span>
+  </a>
+</div>
     </section>
   );
 }
