@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import AnnouncementBar from "./components/AnnouncementBar";
+import FeedbackWidget from "./components/FeedbackWidget";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -65,7 +66,7 @@ function App() {
       <Packages />
       <Contact />
       <Footer />
-
+      <FeedbackWidget />
       <button
         id="backToTop"
         className="fixed bottom-6 right-6 bg-[#B82E33] text-white p-3 rounded-full shadow-lg 

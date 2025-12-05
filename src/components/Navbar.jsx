@@ -42,7 +42,7 @@ export default function Navbar() {
             className="relative font-semibold tracking-wide text-gray-900 hover:text-[#B82E33] transition group"
           >
             {item}
-            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#B82E33] transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#B82E33] transition-all duration-300 group-hover:w-full"></span>
           </a>
         ))}
         <a

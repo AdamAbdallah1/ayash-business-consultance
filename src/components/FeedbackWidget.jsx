@@ -1,72 +1,102 @@
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+import { FaCommentDots } from "react-icons/fa";
 
 export default function FeedbackWidget() {
-const [open, setOpen] = useState(false);
-const [submitted, setSubmitted] = useState(false);
-const [rating, setRating] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [showToast, setShowToast] = useState(false);
+  const [visible, setVisible] = useState(true);
 
-useEffect(() => {
-const saved = localStorage.getItem("feedbackSubmitted");
-if (saved) setSubmitted(true);
-}, []);
+  useEffect(() => {
+    // Load saved rating
+    const savedRating = localStorage.getItem("feedbackRating");
+    if (savedRating) setRating(Number(savedRating));
 
-const handleSubmit = () => {
-if (rating === 0) return;
-localStorage.setItem("feedbackSubmitted", "true");
-localStorage.setItem("feedbackRating", rating);
-setSubmitted(true);
-setOpen(false);
-alert("Thanks for your feedback! ✅");
-};
+    // Handle scroll to match Back-to-Top visibility
+    const handleScroll = () => {
+      const backToTopBtn = document.getElementById("backToTop");
+      if (backToTopBtn) {
+        const isVisible = !backToTopBtn.classList.contains("opacity-0");
+        setVisible(isVisible);
+        if (!isVisible) setOpen(false); // close panel if not visible
+      }
+    };
 
-if (submitted) return null; 
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // check initially
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-return ( <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-{!open && (
-<button
-onClick={() => setOpen(true)}
-className="bg-[#B82E33] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#b4151a] hover:scale-105 transition"
->
-Feedback </button>
-)}
+  const handleSubmit = () => {
+    if (rating === 0) return;
+    localStorage.setItem("feedbackRating", rating);
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
+    setOpen(false); // close panel after submit
+  };
 
-```
-  {open && (
-    <div className="bg-white shadow-xl rounded-xl p-4 w-64 flex flex-col items-center border border-gray-300">
-      <h4 className="text-sm font-semibold mb-2 text-gray-800 text-center">
-        How helpful was this page?
-      </h4>
+  if (!visible) return null;
 
-      <div className="flex gap-2 mb-4">
-        {[1, 2, 3, 4, 5].map((num) => (
+  const widget = (
+    <>
+      <div className="fixed bottom-24 right-6 z-50 flex flex-col items-end">
+        {!open && (
           <button
-            key={num}
-            onClick={() => setRating(num)}
-            className={`w-8 h-8 rounded-full border flex items-center justify-center transition ${
-              rating >= num ? "bg-[#B82E33] text-white" : "bg-gray-200 text-gray-700"
-            }`}
+            onClick={() => setOpen(true)}
+            className="bg-[#B82E33] text-white p-3 rounded-full shadow-lg hover:bg-[#b4151a] hover:scale-110 transition text-xl flex items-center justify-center"
           >
-            {num}
+            <FaCommentDots />
           </button>
-        ))}
+        )}
+
+        {open && (
+          <div className="bg-white shadow-xl rounded-xl p-4 w-64 flex flex-col items-center border border-gray-300 mt-2">
+            <h4 className="text-sm font-semibold mb-2 text-gray-800 text-center">
+              How helpful was this page?
+            </h4>
+
+            <div className="flex gap-2 mb-4">
+              {[1, 2, 3, 4, 5].map((num) => (
+                <button
+                  key={num}
+                  onClick={() => setRating(num)}
+                  className={`w-8 h-8 rounded-full border flex items-center justify-center transition ${
+                    rating >= num
+                      ? "bg-[#B82E33] text-white"
+                      : "bg-gray-200 text-gray-700"
+                  }`}
+                >
+                  {num}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex gap-2">
+              <button
+                onClick={handleSubmit}
+                className="bg-[#B82E33] text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-[#b4151a] transition"
+              >
+                Submit
+              </button>
+              <button
+                onClick={() => setOpen(false)}
+                className="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg text-sm font-semibold hover:bg-gray-300 transition"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="flex gap-2">
-        <button
-          onClick={handleSubmit}
-          className="bg-[#B82E33] text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-[#b4151a] transition"
-        >
-          Submit
-        </button>
-        <button
-          onClick={() => setOpen(false)}
-          className="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg text-sm font-semibold hover:bg-gray-300 transition"
-        >
-          Cancel
-        </button>
-      </div>
-    </div>
-  )}
-</div>
-);
+      {showToast && (
+        <div className="fixed bottom-6 right-6 bg-[#B82E33] text-white px-4 py-2 rounded-lg shadow-lg animate-slide-in-up z-50">
+          Thanks for your feedback!
+        </div>
+      )}
+    </>
+  );
+
+  return createPortal(widget, document.body);
 }

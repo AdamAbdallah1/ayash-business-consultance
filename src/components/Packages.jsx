@@ -67,55 +67,55 @@ export default function Packages() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-        {packages.map((pkg) => (
-          <div
-            key={pkg.title}
-            className="
-              bg-black/10 
-              backdrop-blur-xl 
-              rounded-2xl 
-              shadow-lg 
-              hover:shadow-2xl
-              hover:shadow-[#B82E33]/30
-              p-5
-              flex 
-              flex-col 
-              relative 
-              transition-all 
-              duration-300
-              hover:-translate-y-2
-              min-h-[320px]
-            "
-          >
-            {pkg.badge && (
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#B82E33] text-white font-semibold px-3 py-1 rounded-full text-sm">
-                {pkg.badge}
-              </div>
-            )}
-
-            <h3 className="text-xl font-bold mb-1">{pkg.title}</h3>
-            <p className="text-[#B82E33] font-semibold text-[16px] mb-2">{pkg.price}</p>
-            <p className="text-gray-700 mb-4 text-sm">{pkg.desc}</p>
-
-            <ul className="text-gray-700 space-y-1 mb-6 text-sm">
-              {pkg.features.map((feat) => (
-                <li key={feat} className="flex items-start">
-                  <span className="text-[#B82E33] font-bold mr-2">•</span>
-                  {feat}
-                </li>
-              ))}
-            </ul>
-
-            <button
-              onClick={() => handlePackageClick(pkg.title)}
-              className="w-full py-2.5 mt-auto text-white rounded-xl font-semibold shadow-md transition hover:bg-[#f5787d]"
-              style={{ backgroundColor: pkg.btnColor }}
-            >
-              Choose Package
-            </button>
+  {packages.map((pkg) => (
+      <div
+        key={pkg.title}
+        className="
+          bg-white/10 
+          backdrop-blur-xl 
+          rounded-2xl 
+          shadow-2xl 
+          hover:shadow-[#B82E33]/40
+          p-5
+          flex 
+          flex-col 
+          relative 
+          transition-all 
+          duration-300
+          hover:-translate-y-2
+          min-h-80
+        "
+      >
+        {pkg.badge && (
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#B82E33] text-white font-semibold px-3 py-1 rounded-full text-sm">
+            {pkg.badge}
           </div>
-        ))}
+        )}
+
+        <h3 className="text-xl font-bold mb-1">{pkg.title}</h3>
+        <p className="text-[#B82E33] font-semibold text-[16px] mb-2">{pkg.price}</p>
+        <p className="text-gray-700 mb-4 text-sm">{pkg.desc}</p>
+
+        <ul className="text-gray-700 space-y-1 mb-6 text-sm">
+          {pkg.features.map((feat) => (
+            <li key={feat} className="flex items-start">
+              <span className="text-[#B82E33] font-bold mr-2">•</span>
+              {feat}
+            </li>
+          ))}
+        </ul>
+
+        <button
+          onClick={() => handlePackageClick(pkg.title)}
+          className="w-full py-2.5 mt-auto text-white rounded-2xl font-semibold shadow-md hover:shadow-lg hover:scale-105 transition"
+          style={{ backgroundColor: pkg.btnColor }}
+        >
+          Choose Package
+        </button>
       </div>
+    ))}
+  </div>
+
     </section>
   );
 }

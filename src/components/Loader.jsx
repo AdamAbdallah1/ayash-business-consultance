@@ -8,7 +8,7 @@ export default function Loader({ setLoading }) {
   }, [setLoading]);
 
   return (
-    <div className="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+    <div className="fixed inset-0 bg-white flex items-center justify-center z-9999">
       <img
         src={Logo}
         alt="Logo"
