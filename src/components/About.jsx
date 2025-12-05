@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import FadeIn from "../components/FadeIn";
 
 function About() {
   return (
@@ -10,11 +10,11 @@ function About() {
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
       id="about"
-      className="w-full py-24 px-6 flex justify-center"
+      className="w-full py-50 px-6 flex justify-center"
     >
       <div className="bg-gray-900/10 backdrop-blur-xl shadow-xl rounded-3xl p-10 md:p-14 max-w-3xl border border-white/30 text-center">
 
-        <h2 className="text-4xl font-extrabold text-black">About Our Company</h2>
+        <h2 className="text-2xl font-extrabold text-black">About Our Company</h2>
         <div className="w-24 h-1 bg-[#B82E33] mx-auto my-4 rounded-full"></div>
 
         <p className="mt-4 text-gray-700 text-lg leading-relaxed">

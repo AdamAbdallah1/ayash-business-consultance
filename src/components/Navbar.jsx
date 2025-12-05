@@ -47,7 +47,7 @@ export default function Navbar() {
         ))}
         <a
           href="#contact"
-          className="ml-4 px-6 py-2 bg-[#b6595c] hover:bg-[#8f1519] text-white font-semibold rounded-xl shadow-lg transition-all duration-300 ease-out"
+          className="ml-4 px-6 py-2 bg-[#B82E33] hover:bg-[#8f1519] text-white font-semibold rounded-xl shadow-lg transition-all duration-300 ease-out"
         >
           Get Started
         </a>

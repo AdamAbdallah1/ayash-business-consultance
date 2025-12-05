@@ -40,6 +40,9 @@ export default function Footer() {
       <p className="mt-6 text-center text-gray-500 text-xs md:text-sm">
         &copy; {new Date().getFullYear()} Consulting Co. All rights reserved.
       </p>
+      <p className="text-[11px] text-gray-500 mt-2 opacity-70 flex justify-center">
+        Powered by <span className="font-semibold">Cedars Tech</span>
+      </p>
     </footer>
   );
 }

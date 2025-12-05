@@ -61,7 +61,7 @@ export default function Packages() {
   return (
     <section id="packages" data-aos="fade-up" className="w-full px-6 py-24 text-black">
       
-      <h2 className="text-4xl font-bold text-center mb-3">Our Packages</h2>
+      <h2 className="text-3xl font-bold text-center mb-3">Our Packages</h2>
       <p className="text-center text-gray-600 mb-10 max-w-xl mx-auto text-sm">
         Choose the package that fits your business growth stage.
       </p>
