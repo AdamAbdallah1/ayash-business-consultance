@@ -41,7 +41,7 @@ export default function Footer() {
         &copy; {new Date().getFullYear()} Consulting Co. All rights reserved.
       </p>
       <p className="text-[11px] text-gray-500 mt-2 opacity-70 flex justify-center">
-        Powered by <span className="font-semibold">Cedars Tech</span>
+        Powered by <span className="font-semibold"> Cedars Tech</span>
       </p>
     </footer>
   );

@@ -14,7 +14,7 @@ export default function Contact() {
         Have capital and want to turn it into a real working business? Reach out — we’ll guide you from idea to execution.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-3 w-full max-w-5xl justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-6 gap-y-6 gap-x-3 w-full max-w-5xl justify-items-center">
         
         <div className="bg-gray-900/10 backdrop-blur-xl shadow-xl rounded-2xl p-4 sm:p-6 text-left border border-white/20 w-full max-w-md hover:scale-[1.02] transition flex flex-col">
           <h3 className="text-lg font-semibold mb-3 text-black">Contact Information</h3>
