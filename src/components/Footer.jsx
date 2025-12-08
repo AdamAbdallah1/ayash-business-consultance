@@ -8,7 +8,6 @@ export default function Footer() {
 
   useEffect(() => {
     const hour = new Date().getHours();
-
     if (hour >= 5 && hour < 12)
       setGreeting("Good morning! Let's grow your business today.");
     else if (hour >= 12 && hour < 18)
@@ -19,7 +18,6 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#1a0d3c] text-gray-300 py-8 px-6 border-t border-yellow-500/20 relative overflow-hidden">
-      
       {greeting && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,8 +29,7 @@ export default function Footer() {
         </motion.div>
       )}
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0 mt-12">
-        
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-6 md:gap-0 mt-12">
         <div className="flex items-center space-x-2">
           <img src={Logo} alt="Company Logo" className="w-12 h-12" />
           <span className="text-lg font-semibold text-white tracking-wide">
@@ -40,7 +37,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="flex space-x-6 text-sm font-medium">
+        <div className="flex space-x-6 text-sm font-medium justify-center">
           {['Home', 'About', 'Packages', 'Contact'].map((item) => (
             <a
               key={item}

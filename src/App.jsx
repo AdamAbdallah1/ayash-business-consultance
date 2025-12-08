@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 import AnnouncementBar from "./components/AnnouncementBar";
 import FeedbackWidget from "./components/FeedbackWidget";
+import { HiArrowUp } from "react-icons/hi";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -62,8 +63,9 @@ function App() {
       <Navbar />
       <div id="scrollBar" className="fixed top-0 left-0 h-1 bg-[#B82E33] w-0 z-50"></div>
       <Hero />
-      <About />
       <Packages />
+
+      <About />
       <Contact />
       <Footer />
       <FeedbackWidget />
@@ -71,8 +73,9 @@ function App() {
         id="backToTop"
         className="fixed bottom-6 right-6 bg-[#B82E33] text-white p-3 rounded-full shadow-lg 
         hover:bg-[#b4151a] hover:scale-105 transition opacity-0 pointer-events-none"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
+        <HiArrowUp size={20} />
       </button>
       <AnnouncementBar />
     </div>
