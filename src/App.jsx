@@ -73,7 +73,6 @@ function App() {
         hover:bg-[#b4151a] hover:scale-105 transition opacity-0 pointer-events-none"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
-        ↑
       </button>
       <AnnouncementBar />
     </div>
