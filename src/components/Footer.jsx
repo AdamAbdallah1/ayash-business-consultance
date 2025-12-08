@@ -45,7 +45,7 @@ export default function Footer() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="hover:text-yellow-400 transition transform hover:-translate-y-px"
+              className="hover:text-[#B82E33] transition transform hover:-translate-y-px"
             >
               {item}
             </a>
@@ -56,8 +56,8 @@ export default function Footer() {
           {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
             <a
               key={idx}
-              href="#"
-              className="hover:text-yellow-400 transition transform hover:-translate-y-px"
+              href="https://www.instagram.com/ciaoace"
+              className="hover:text-[#B82E33] transition transform hover:-translate-y-px"
             >
               <Icon />
             </a>
@@ -69,7 +69,7 @@ export default function Footer() {
         &copy; {new Date().getFullYear()} Consulting Co. All rights reserved.
       </p>
       <p className="text-[11px] text-gray-500 mt-2 opacity-70 flex justify-center">
-        Powered by <span className="font-semibold">Cedars Tech</span>
+        Powered by <span className="font-semibold"> Cedars Tech</span>
       </p>
     </footer>
   );
