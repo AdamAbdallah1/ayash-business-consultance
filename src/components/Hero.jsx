@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-[70vh] md:min-h-screen flex items-center justify-start px-4 sm:px-6 md:px-20 overflow-hidden mt-20"
+      className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-20 overflow-hidden mt-0"
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -14,52 +14,62 @@ const Hero = () => {
           backgroundImage: `url(${HeroBg})`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
         aria-hidden="true"
       />
 
-      <div className="absolute inset-0 bg-black/40 md:bg-black/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
 
-      <div className="relative z-10 w-full max-w-3xl flex flex-col items-start text-left px-2 sm:px-4">
-  <motion.h1
-    className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-3 sm:mb-6 text-white"
-    initial={{ opacity: 0, y: 60 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-  >
-    Business Development & Consultancy
-  </motion.h1>
+      <div className="relative z-10 w-full max-w-4xl flex flex-col items-start text-left px-4 sm:px-6">
+        <motion.h1
+          className="text-white font-extrabold leading-snug mb-4 sm:mb-6"
+          style={{
+            fontSize: "clamp(2rem, 6vw, 4rem)"
+          }}
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Business Development & Consultancy
+        </motion.h1>
 
-  <motion.p
-    className="text-sm sm:text-lg md:text-2xl max-w-xl sm:max-w-2xl mb-2 sm:mb-4 text-white/90"
-    initial={{ opacity: 0, y: 30 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.2 }}
-  >
-    Build a Business That Scales.
-  </motion.p>
+        <motion.p
+          className="text-white/90 mb-3 sm:mb-6"
+          style={{
+            fontSize: "clamp(1rem, 3.5vw, 1.75rem)"
+          }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+        >
+          Build a Business That Scales.
+        </motion.p>
 
-  <motion.p
-    className="text-xs sm:text-sm md:text-lg max-w-xl sm:max-w-2xl mb-6 sm:mb-10 text-white/70"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.4 }}
-  >
-    Strategic business development for founders in Qatar ready to systemize growth, enter new markets, and lead with confidence.
-  </motion.p>
+        <motion.p
+          className="text-white/70 mb-6 sm:mb-10"
+          style={{
+            fontSize: "clamp(0.875rem, 2.5vw, 1.25rem)"
+          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          Strategic business development for founders in Qatar ready to systemize growth, enter new markets, and lead with confidence.
+        </motion.p>
 
-  <motion.button
-    onClick={() =>
-      document.getElementById("contact").scrollIntoView({ behavior: "smooth" })
-    }
-    className="px-5 sm:px-8 py-2.5 sm:py-3 bg-[#B82E33] text-white font-bold rounded-xl shadow-lg hover:bg-[#8f1519] hover:scale-105 transition-all"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.6 }}
-  >
-    Get Started
-  </motion.button>
-</div>
+        <motion.button
+          onClick={() =>
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" })
+          }
+          className="px-6 sm:px-10 py-3 sm:py-4 bg-[#B82E33] text-white font-bold rounded-xl shadow-lg hover:bg-[#8f1519] hover:scale-105 transition-all"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          Get Started
+        </motion.button>
+      </div>
     </section>
   );
 };
