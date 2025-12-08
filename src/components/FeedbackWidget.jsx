@@ -9,22 +9,20 @@ export default function FeedbackWidget() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Load saved rating
     const savedRating = localStorage.getItem("feedbackRating");
     if (savedRating) setRating(Number(savedRating));
 
-    // Handle scroll to match Back-to-Top visibility
     const handleScroll = () => {
       const backToTopBtn = document.getElementById("backToTop");
       if (backToTopBtn) {
         const isVisible = !backToTopBtn.classList.contains("opacity-0");
         setVisible(isVisible);
-        if (!isVisible) setOpen(false); // close panel if not visible
+        if (!isVisible) setOpen(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // check initially
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,7 +31,7 @@ export default function FeedbackWidget() {
     localStorage.setItem("feedbackRating", rating);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
-    setOpen(false); // close panel after submit
+    setOpen(false); 
   };
 
   if (!visible) return null;
