@@ -22,7 +22,7 @@ export default function Contact() {
             <FaWhatsapp className="text-green-500" size={20} /> +974 3999 5533
           </p>
           <p className="flex items-center gap-2 text-black/90 mt-3">
-            <HiMail className="text-blue-400" size={20} /> cedars.tech.consulting@gmail.com
+            <HiMail className="text-blue-400" size={20} /> elayashdaniel@gmail.com
           </p>
           <p className="flex items-center gap-2 text-black/90 mt-3">
             <HiLocationMarker className="text-red-500" size={20} /> Beirut, Lebanon
@@ -34,7 +34,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Business Hours */}
         <div className="bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-6 sm:p-8 flex flex-col w-full hover:scale-[1.03] transition-transform duration-300">
           <h3 className="text-lg font-semibold mb-4 text-black">Business Hours</h3>
 
@@ -55,7 +54,7 @@ export default function Contact() {
         </a>
 
         <a
-          href="mailto:cedars.tech.consulting@gmail.com"
+          href="mailto:elayashdaniel@gmail.com"
           className="px-6 py-3 bg-linear-to-r from-[#3A5487] to-[#2A3D6D] text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition transform flex items-center gap-2 justify-center min-w-[180px]"
         >
           Send Email

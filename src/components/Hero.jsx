@@ -19,9 +19,9 @@ const Hero = () => {
         aria-hidden="true"
       />
 
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-black/80 " />
 
-      <div className="relative z-10 w-full max-w-4xl flex flex-col items-start text-left px-4 sm:px-6">
+      <div className="relative z-10 w-full max-w-4xl flex  flex-col items-start text-left sm:mt-20 px-4 sm:px-6">
         <motion.h1
           className="text-white font-extrabold leading-snug mb-4 sm:mb-6"
           style={{
@@ -31,7 +31,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Business Development & Consultancy
+          Ayash Business Development
         </motion.h1>
 
         <motion.p

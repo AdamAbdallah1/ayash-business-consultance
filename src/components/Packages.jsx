@@ -20,7 +20,7 @@ export default function Packages() {
       highlight: true
     },
     {
-      title: "Core Growth Engine (3 Months)",
+      title: "Core Growth Engine (1 Month)",
       price: "QAR 6,000 / month",
       desc: "For the business ready to build a repeatable growth system.",
       features: [
@@ -34,7 +34,7 @@ export default function Packages() {
       btnColor: "#B82E33"
     },
     {
-      title: "Scale & Systemize (6 Months)",
+      title: "Scale & Systemize (3 Months)",
       price: "QAR 15,000 total",
       desc: "For the team committed to scaling with structure and insight.",
       features: [
@@ -47,7 +47,7 @@ export default function Packages() {
       badge: "Most Popular"
     },
     {
-      title: "Transform & Lead",
+      title: "Transform & Lead (6 Months)",
       price: "QAR 30,000 total",
       desc: "For the leader transforming their business into a market leader.",
       features: [
