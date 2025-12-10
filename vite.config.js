@@ -9,5 +9,5 @@ export default defineConfig({
     tailwindcss(),
   ],
 
-  base: '/ayash-business-consultance/'
+  base: './'
 })
