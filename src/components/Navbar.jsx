@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav
-  className={`w-full px-8 md:px-12 py-3 flex justify-between items-center fixed top-0 left-0 z-50
+  className={`w-full pl-2 pr-8 md:pl-4 md:pr-12 py-3 flex justify-between items-center fixed top-0 left-0 z-50
     bg-white backdrop-blur-xl shadow-lg border-b border-yellow-500/20
     transition-transform duration-300 ${show ? 'translate-y-0' : '-translate-y-full'}`}
   style={{ minHeight: '80px' }}
@@ -29,7 +29,7 @@ export default function Navbar() {
     <img
       src={Logo}
       alt="Company Logo"
-      className="h-16 object-contain scale-50"
+      className="h-16 object-contain scale-70"
     />
   </div>
 

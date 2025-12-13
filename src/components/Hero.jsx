@@ -31,7 +31,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Ayash Business consultancy
+          Ayash <br /> Business <br /> Consultancy
         </motion.h1>
 
         <motion.p
@@ -43,7 +43,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          Build a Business That Scales.
+          Build a business that scales.
         </motion.p>
 
         <motion.p
