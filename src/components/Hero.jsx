@@ -31,7 +31,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Ayash Business Development
+          Ayash Business consultancy
         </motion.h1>
 
         <motion.p

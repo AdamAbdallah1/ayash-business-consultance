@@ -8,7 +8,7 @@ export default function Packages() {
 
   const packages = [
     {
-      title: "Diagnostic & Action Plan (1 Month)",
+      title: "Diagnostic & Action Plan",
       price: "QAR 3,000 (One-Time)",
       desc: "For the founder who needs clarity and a starting point.",
       features: [

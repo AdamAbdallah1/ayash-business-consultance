@@ -25,7 +25,7 @@ export default function Contact() {
             <HiMail className="text-blue-400" size={20} /> elayashdaniel@gmail.com
           </p>
           <p className="flex items-center gap-2 text-black/90 mt-3">
-            <HiLocationMarker className="text-red-500" size={20} /> Beirut, Lebanon
+            <HiLocationMarker className="text-red-500" size={20} /> Doha, Qatar
           </p>
 
           <div className="mt-4 flex gap-4 text-black">
