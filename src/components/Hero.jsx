@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import HeroBg from "../assets/HeroBg.jpg";
+import heroContent from "../content/hero.json";
 
 const Hero = () => {
   return (
@@ -31,7 +32,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Ayash <br /> Business <br /> Consultancy
+          {heroContent.title}
         </motion.h1>
 
         <motion.p
@@ -43,7 +44,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          Build a business that scales.
+          {heroContent.subtitle}
         </motion.p>
 
         <motion.p
@@ -55,7 +56,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
-          Strategic business development for founders in Qatar ready to systemize growth, enter new markets, and lead with confidence.
+          {heroContent.description}
         </motion.p>
 
         <motion.button
@@ -67,7 +68,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          Get Started
+          {heroContent.buttonText}
         </motion.button>
       </div>
     </section>

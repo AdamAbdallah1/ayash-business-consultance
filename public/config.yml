@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: https://adamabdallah1.github.io/ayash-business-consultance/
+  branch: main 
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - file: "src/content.js"
+        label: "Hero Content"
+        name: "hero"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Button Text", name: "buttonText", widget: "string" }
