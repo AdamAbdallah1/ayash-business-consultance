@@ -47,7 +47,7 @@ export default function Contact() {
 
       <div className="mt-12 flex flex-col md:flex-row items-center gap-4 justify-center w-full max-w-3xl">
         <a
-          href="https://wa.me/96181090757"
+          href="https://wa.me/97439995533"
           className="px-6 py-3 bg-linear-to-r from-[#25D366] to-[#1AA54A] text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition transform flex items-center gap-2 justify-center min-w-[180px]"
         >
           <FaWhatsapp size={18} /> WhatsApp Us

@@ -28,7 +28,7 @@ export default function Packages() {
         "Documented sales & marketing plans",
         "Lead generation & conversion planning",
         "Monthly team training workshop",
-        "kpi report",
+        "KPI report",
         "Email support (24-hour response)"
       ],
       btnColor: "#B82E33"
@@ -68,7 +68,6 @@ export default function Packages() {
         Choose the package that fits your business growth stage.
       </p>
 
-      {/* Top Highlight Package */}
       <div className="max-w-md mx-auto mb-12">
         {packages
           .filter((p) => p.highlight)
