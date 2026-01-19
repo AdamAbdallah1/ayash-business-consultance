@@ -1,6 +1,6 @@
 export const content = {
   hero: {
-    title: "Ayash Business Consultancy",
+    title: "Ace Boost Management Consultancy",
     subtitle: "Build a business that scales.",
     description: "Strategic business development for founders in Qatar ready to systemize growth, enter new markets, and lead with confidence.",
     buttonText: "Get Started"

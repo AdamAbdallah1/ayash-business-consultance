@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import HeroBg from "../assets/HeroBg.jpg";
 import heroContent from "../content/hero.json";
-import Snowfall from 'react-snowfall';
 
 
 const Hero = () => {
@@ -21,7 +20,6 @@ const Hero = () => {
         }}
         aria-hidden="true"
       />
-            <Snowfall color="white"/>
 
 
       <div className="absolute inset-0 bg-black/80 " />

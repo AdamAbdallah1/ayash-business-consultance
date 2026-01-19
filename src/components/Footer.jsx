@@ -26,10 +26,10 @@ export default function Footer() {
         </div>
 
         <div className="flex space-x-3 text-base">
-          {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
+          {[FaFacebookF, FaInstagram].map((Icon, idx) => (
             <a
               key={idx}
-              href="https://www.instagram.com/ciaoace"
+              href="https://www.instagram.com/abcqa_tar"
               className="hover:text-[#B82E33] transition transform hover:-translate-y-px"
             >
               <Icon />

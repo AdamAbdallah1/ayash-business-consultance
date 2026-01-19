@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full py-40 md:py-60 px-4 flex flex-col items-center text-black justify-center"
+      className="w-full py-40 md:py-40 px-4 flex flex-col items-center text-black justify-center"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">Contact Us</h2>
 
@@ -48,14 +48,14 @@ export default function Contact() {
       <div className="mt-12 flex flex-col md:flex-row items-center gap-4 justify-center w-full max-w-3xl">
         <a
           href="https://wa.me/97439995533"
-          className="px-6 py-3 bg-linear-to-r from-[#25D366] to-[#1AA54A] text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition transform flex items-center gap-2 justify-center min-w-[180px]"
+          className="px-6 py-3 bg-linear-to-r from-[#25D366] to-[#1AA54A] text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition transform flex items-center gap-2 justify-center min-w-45"
         >
           <FaWhatsapp size={18} /> WhatsApp Us
         </a>
 
         <a
           href="mailto:elayashdaniel@gmail.com"
-          className="px-6 py-3 bg-linear-to-r from-[#3A5487] to-[#2A3D6D] text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition transform flex items-center gap-2 justify-center min-w-[180px]"
+          className="px-6 py-3 bg-linear-to-r from-[#3A5487] to-[#2A3D6D] text-white font-semibold rounded-2xl shadow-lg hover:shadow-2xl hover:scale-105 transition transform flex items-center gap-2 justify-center min-w-45"
         >
           Send Email
         </a>

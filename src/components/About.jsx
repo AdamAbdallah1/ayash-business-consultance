@@ -10,7 +10,7 @@ function About() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       id="about"
-      className="w-full py-20 md:py-60 px-6 flex justify-center"
+      className="w-full py-20 md:py-40 px-6 flex justify-center"
     >
       <div className="bg-white/10 backdrop-blur-xl shadow-2xl rounded-3xl p-8 md:p-14 max-w-3xl border border-white/20 text-center">
         
