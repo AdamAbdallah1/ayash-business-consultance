@@ -30,7 +30,7 @@ export default function Contact() {
 
           <div className="mt-4 flex gap-4 text-black">
             <a href="#" className="hover:text-[#B82E33] transition"><FaLinkedin size={18} /></a>
-            <a href="#" className="hover:text-[#B82E33] transition"><FaInstagram size={18} /></a>
+            <a href="https://www.instagram.com/abcqatar.co" className="hover:text-[#B82E33] transition"><FaInstagram size={18} /></a>
           </div>
         </div>
 

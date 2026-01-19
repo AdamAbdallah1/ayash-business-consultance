@@ -29,7 +29,7 @@ export default function Footer() {
           {[FaFacebookF, FaInstagram].map((Icon, idx) => (
             <a
               key={idx}
-              href="https://www.instagram.com/abcqa_tar"
+              href="https://www.instagram.com/abcqatar.co"
               className="hover:text-[#B82E33] transition transform hover:-translate-y-px"
             >
               <Icon />
